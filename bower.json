@@ -1,0 +1,23 @@
+{
+  "name": "bookmarker",
+  "version": "0.0.1",
+  "authors": [
+    "Synecy <@synecys>"
+  ],
+  "description": "bookmark storage",
+  "main": "app.js",
+  "license": "MIT",
+  "homepage": "http://www.synecy.com/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.4",
+    "zoom.js": "https://github.com/fat/zoom.js.git"
+  }
+}
