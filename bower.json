@@ -18,6 +18,7 @@
   "dependencies": {
     "jquery": "~2.1.4",
     "bootstrap": "~3.3.4",
-    "zoom.js": "https://github.com/fat/zoom.js.git"
+    "font-awesome": "~4.3.0",
+    "sweetalert2": "~0.2.1"
   }
 }

@@ -1,0 +1,176 @@
+/* Desktop design */
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #eee;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  margin-left: 25%;
+  margin-right: 10%;
+  margin-bottom: 40px;
+}
+
+#menu {
+  z-index: 999;
+  position: fixed;
+  color: #eee;
+  font-size: 1.5em;
+  background-color: #37474f;
+  width: 20%;
+  min-width: 250px;
+  height: 100%;
+  float: left;
+}
+
+#menu-header {
+  font-size: 2em;
+  font-family: 'Lobster', cursive;
+  text-shadow: 2px 2px #546e7a;
+  line-height: 100px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.menu-header-text-mobile {
+  display: none;
+}
+.menu-header-text {
+  display: block;
+}
+
+.menu-button {
+  background-color: #546e7a;
+  width: 100%;
+  height: 40px;
+  padding-left: 20px;
+  line-height: 40px;
+  vertical-align: middle;
+  -webkit-user-select: none;      
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.menu-button:hover {
+  background-color: #78909C;
+  cursor: pointer;
+}
+
+.menu-btn-text {
+  padding-left: 15px;
+}
+
+.bookmarkbox {
+  color: #eee;
+  width: 246px;
+  height: 151px;
+  font-size: 1.5em;
+  margin-top: 40px;
+  margin-left: 40px;
+  border-radius: 2px;
+  border: 1px solid #111111;
+  background-color: #cfd8dc;
+}
+
+.bookmarkbox:hover {
+  background-color: #E1E8EA;
+}
+
+.bookmarkbox-image {
+  margin-left: -15px;
+  opacity: 0.9;
+}
+
+.bookmarkbox-image:hover {
+  opacity: 1.0;
+}
+
+.bookmarkbox-options {
+  position:absolute; 
+  bottom: 0px;
+  margin-left: -15px;
+  padding-left: 10px;
+  width: 244px;
+  height: 30px;
+  background-color: #5C5C5C;
+  opacity: 0.6;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+.fa-trash {
+  float: right;
+  padding-right: 10px;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+.bookmarkbox-options a {
+  color: #eee;
+  text-decoration: none;
+}
+
+.bookmarkbox-options a:hover {
+  color: #fff;
+}
+
+.sweet-alert-input {
+  color: #626262;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid #D7D7D7;
+  height: 43px;
+  margin-top: 10px;
+  margin-bottom: 17px;
+  font-size: 18px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.06) inset;
+  padding: 0px 12px;
+  transition: all 0.3s ease 0s;
+}
+
+.sweet-alert-input:focus {
+  outline: medium none;
+  box-shadow: 0px 0px 3px #C4E6F5;
+  border: 1px solid #B4DBED;
+}
+
+.sweetalert-popup-text {
+  color: #797979;
+}
+
+
+/* Responsive mobile design */
+
+@media (max-width: 940px) {
+  
+  #menu {
+    width: 75px;
+    min-width: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+  }
+
+  .menu-button {
+    padding-left: 0px;
+  }
+
+  .menu-btn-text {
+    display: none;
+  }
+
+ .menu-header-text-mobile {
+    display: block;
+  }
+  .menu-header-text {
+    display: none;
+  }
+
+}
