@@ -3,7 +3,7 @@
 var BookmarkApp = (function() {
 
   var addBookmark = function( key, title, url, imageurl, folder, tags ) {
-    $(".row").append("<div id='"+key+"' class='bookmarkbox col-xs-6 col-sm-4'>\
+    $(".row").append("<div id='"+key+"' class='bookmarkbox tooltips col-xs-6 col-sm-4' title='"+title+"' >\
                         <a href='"+url+"' target='_blank'>\
                           <img class='bookmarkbox-image' src='"+imageurl+"' alt='bookmark' height='149' width='244'> \
                         </a>\
@@ -26,11 +26,13 @@ var BookmarkApp = (function() {
 
 
   var updateBookmark = function( key, title, url, imageurl, folder, tags ) {
+    $("#"+key).attr("title", title);
     $("#"+key+" > a").attr("href", url);
     $("#"+key+" > a > .bookmarkbox-image").attr("src", imageurl);
     $("#"+key+" > .bookmarkbox-options > #bookmarkbox-options-zoom").attr("zoom-data", imageurl);
     $("#"+key+" > .bookmarkbox-options > #bookmarkbox-options-edit").attr("edit-url", url);
     $("#"+key+" > .bookmarkbox-options > #bookmarkbox-options-edit").attr("edit-title", title);
+    $("#"+key).tooltipster('content', title);
   }
 
 
@@ -58,6 +60,7 @@ var BookmarkApp = (function() {
       closeOnConfirm: false
       },
       function() {
+        swal.disableButtons();
         $.ajax({
           type: 'post',
           url: '/api/remove',
@@ -118,6 +121,7 @@ var BookmarkApp = (function() {
       },
       function() {
         if ( ($('#edit-bookmark-url').val().length > 0) && ($('#edit-bookmark-name').val().length > 0) ) {
+          swal.disableButtons();
           $.ajax({
             type: 'post',
             url: '/api/edit',
@@ -185,6 +189,10 @@ var BookmarkApp = (function() {
                              json[key].tags
                             );
               }
+              $('.tooltips').tooltipster({
+                theme: 'tooltipster-shadow',
+                delay: 0
+              });
             }
           },
           error: function(err) {
@@ -208,6 +216,7 @@ var BookmarkApp = (function() {
             },
             function() {
               if ( ($('#add-bookmark-url').val().length > 0) && ($('#add-bookmark-name').val().length > 0) ) {
+                swal.disableButtons();
                 $.ajax({
                   type: 'post',
                   url: '/api/save',   

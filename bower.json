@@ -16,9 +16,10 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
     "bootstrap": "~3.3.4",
     "font-awesome": "~4.3.0",
-    "sweetalert2": "~0.2.1"
+    "jquery": "~2.1.4",
+    "sweetalert2": "~0.2.1",
+    "tooltipster": "~3.3.0"
   }
 }
